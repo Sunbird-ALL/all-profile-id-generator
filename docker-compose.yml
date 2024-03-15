@@ -1,0 +1,11 @@
+version: '3.1'
+services:
+  profile-id-generator:
+    image: all-profile-id-generator
+    ports:
+      - '3003:3008'
+    restart: always
+    environment:
+      - PORT=3008
+      - MONGODB_URL=
+      - DB_NAME=
