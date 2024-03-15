@@ -14,7 +14,7 @@ RUN npm install
 COPY . .
 
 # Expose the port that your application is running on
-EXPOSE 3009
+EXPOSE $PORT
 
 # Define the command to start your application
 CMD ["node", "app.js"]
