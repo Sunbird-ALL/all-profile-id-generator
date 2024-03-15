@@ -15,7 +15,7 @@ COPY . .
 COPY .env ./
 
 # Expose the port that your application is running on
-EXPOSE 3008
+EXPOSE 3009
 
 # Define the command to start your application
 CMD ["node", "app.js"]
