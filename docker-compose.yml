@@ -1,11 +1,15 @@
-version: '3.1'
+version: '3.3'
+
 services:
-  profile-id-generator:
-    image: all-profile-id-generator
+  all-profile-id-generator:
+    image: prasadharketekdi/all-profile-id-generator:latest
+    container_name: all-profile-id-generator
     ports:
       - '3003:3008'
+    networks:
+      - ai-network
     restart: always
-    environment:
-      - PORT=3008
-      - MONGODB_URL=
-      - DB_NAME=
+networks:
+  ai-network:
+    external: true
+    name: ai-network
